@@ -10,7 +10,7 @@ import (
 func main() {
 	port := fmt.Sprintf(":%s", os.Getenv("PORT"))
 	http.HandleFunc("/", f)
-	fmt.Println("Starting default static web app...")
+	fmt.Println("Starting default static web app, port is %s...", port)
 	http.ListenAndServe(port, nil)
 }
 
